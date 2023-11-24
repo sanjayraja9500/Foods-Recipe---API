@@ -4,6 +4,8 @@ import Axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import Recipe from './components/Recipe';
 import Alert from './components/Alert';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import RecipeDetails from './components/RecipeDetails';
 
 function App() {
   const [query, setQuery] = useState('');
@@ -39,25 +41,30 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <h1>Food Recipe App</h1>
-      <form onSubmit={onSubmit} className='search-form'>
-        {alert !== '' && <Alert alert={alert} />}
-        <input
-          type='text'
-          name='query'
-          onChange={onChange}
-          value={query}
-          autoComplete='off'
-          placeholder='Search Foods...'
-        />
-        <input type='submit' value='Search' />
-      </form>
-      <div className='recipes'>
-        {recipes != [] &&
-          recipes.map((recipe) => <Recipe key={uuidv4()} recipe={recipe} />)}
+    <BrowserRouter>
+      <div className='App'>
+        <h1>Food Recipe App</h1>
+        <form onSubmit={onSubmit} className='search-form'>
+          {alert !== '' && <Alert alert={alert} />}
+          <input
+            type='text'
+            name='query'
+            onChange={onChange}
+            value={query}
+            autoComplete='off'
+            placeholder='Search Foods...'
+          />
+          <input type='submit' value='Search' />
+        </form>
+        <div className='recipes'>
+          {recipes != [] &&
+            recipes.map((recipe) => <Recipe key={uuidv4()} recipe={recipe} />)}
+        </div>
       </div>
-    </div>
+      <Routes>
+        <Route path='/ingredient' element={<RecipeDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
