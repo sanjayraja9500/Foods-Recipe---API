@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Recipe from './components/Recipe';
 import Alert from './components/Alert';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import RecipeDetails from './components/RecipeDetails';
+import RecipeDetail from './components/RecipeDetails';
 
 function App() {
   const [query, setQuery] = useState('');
@@ -61,8 +61,10 @@ function App() {
             recipes.map((recipe) => <Recipe key={uuidv4()} recipe={recipe} />)}
         </div>
       </div>
+
       <Routes>
-        <Route path='/ingredient' element={<RecipeDetails />} />
+        <Route path='/recipe' element={<Recipe />} />
+        <Route path='/ingredient' element={<RecipeDetail />} />
       </Routes>
     </BrowserRouter>
   );

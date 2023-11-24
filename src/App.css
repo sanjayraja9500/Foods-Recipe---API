@@ -30,8 +30,8 @@ h1 {
 }
 
 .search-form {
-  width: 50rem;
-  height: 10rem;
+  width: 45rem;
+  height: 9rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,10 +143,63 @@ h1 {
 }
 
 .ingredient-list {
+  height: 10%;
+  width: 70%;
+  display: flex;
+  align-items: center;
   margin-top: 1rem;
-  background-color: #f0f0f0;
+  background-color: #ffff;
   border-radius: 0.5rem;
   padding: 0.5rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.home {
+  margin: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.url {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 1.5rem;
+  background-color: #ea670f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cls-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  position: fixed;
+  top: 5rem;
+  right: 8rem;
 }
 
 .ingredient-list li {
@@ -155,10 +208,21 @@ h1 {
 
 .ingredient-text {
   font-size: 1.5rem;
-  color: #888;
+  color: #000;
+  border: 2px solid #fff;
+  background-color: rgb(238, 187, 187);
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: 600;
 }
 
 .ingredient-weight {
   color: #40b48e;
   font-size: 1.3rem;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+.tube {
+  font-size: 3rem;
 }
