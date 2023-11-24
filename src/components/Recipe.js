@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import RecipeDetails from './RecipeDetails';
 import Model from 'react-modal';
-import { Link } from 'react-router-dom';
+
 import { RxCrossCircled } from 'react-icons/rx';
 import { SlSocialYoutube } from 'react-icons/sl';
 
