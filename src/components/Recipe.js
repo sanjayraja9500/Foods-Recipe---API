@@ -18,7 +18,7 @@ const Recipe = ({ recipe }) => {
       </a>
       <button onClick={() => setShow(true)}>Ingredients</button>
       <Model isOpen={show}>
-        <h2>{label}</h2>
+        <h2 className='title'>{label}</h2>
         <button
           className='cls-btn'
           onClick={() => {
