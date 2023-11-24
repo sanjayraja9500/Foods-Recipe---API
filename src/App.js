@@ -30,6 +30,7 @@ function App() {
     }
   };
 
+  console.log();
   const onChange = (e) => setQuery(e.target.value);
 
   const onSubmit = (e) => {
