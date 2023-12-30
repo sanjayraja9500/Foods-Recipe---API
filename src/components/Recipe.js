@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RecipeDetails from './RecipeDetails';
 import Model from 'react-modal';
+import { FcHome } from 'react-icons/fc';
 
 import { RxCrossCircled } from 'react-icons/rx';
 import { SlSocialYoutube } from 'react-icons/sl';
@@ -8,6 +9,10 @@ import { SlSocialYoutube } from 'react-icons/sl';
 const Recipe = ({ recipe }) => {
   const [show, setShow] = useState(false);
   const { label, image, url, ingredients } = recipe.recipe;
+
+  const handleClick = () => {
+    window.location.reload();
+  };
 
   return (
     <div className='recipe'>
@@ -19,13 +24,16 @@ const Recipe = ({ recipe }) => {
       <button onClick={() => setShow(true)}>Ingredients</button>
       <Model isOpen={show}>
         <h2 className='title'>{label}</h2>
+        <button className='home' onClick={handleClick}>
+          <FcHome className='home-btn' size={20} />
+        </button>
         <button
           className='cls-btn'
           onClick={() => {
             setShow(false);
           }}
         >
-          <RxCrossCircled className='close' />
+          <RxCrossCircled className='close' size={20} />
         </button>
 
         <div className='img'>

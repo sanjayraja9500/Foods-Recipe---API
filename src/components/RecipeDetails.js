@@ -6,8 +6,10 @@ const RecipeDetails = ({ ingredients }) => {
     return (
       <div className='menu'>
         <ul key={uuidv4()} className='ingredient-list'>
+          <div className='star'>&#9734;</div>
           <li className='ingredient-text'>{ingredient.text}</li>
-          <li className='ingredient-weight'>Weight - {ingredient.weight}gm</li>
+          <div className='space'>-</div>
+          <li className='ingredient-weight'> {ingredient.weight}gm</li>
         </ul>
       </div>
     );
